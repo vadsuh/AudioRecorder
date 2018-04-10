@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fz6-E4-yVk">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Record-->
+        <scene sceneID="gov-UK-Ago">
+            <objects>
+                <viewController id="SPx-mt-R5e" customClass="RecordViewController" customModule="AudioRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EMs-Fy-sIi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="aRE-Fk-LRX"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Record" image="Record" selectedImage="Record" id="bUI-FI-2AS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1pE-Al-eaP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-459" y="-219"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="zF5-Qp-zhF">
+            <objects>
+                <tabBarController id="fz6-E4-yVk" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wxY-at-l1Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="SPx-mt-R5e" kind="relationship" relationship="viewControllers" id="ZHx-hf-PjN"/>
+                        <segue destination="BuL-E3-Ehu" kind="relationship" relationship="viewControllers" id="eD1-Jg-vmw"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eXc-cQ-oBH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1423" y="-48"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="GSA-jd-RJA">
+            <objects>
+                <tableViewController id="BuL-E3-Ehu" customClass="HistoryViewController" customModule="AudioRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rce-m4-K5S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="audioRecord" rowHeight="120" id="6jK-CS-Xp3" customClass="AudioRecordCell" customModule="AudioRecorder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6jK-CS-Xp3" id="a5o-Bw-0dw">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="119.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WAP-He-Qts">
+                                            <rect key="frame" x="16" y="11" width="288" height="98"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dgU-Hv-Pjm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="98" height="98"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="98" id="5tt-5K-UuI"/>
+                                                        <constraint firstAttribute="width" constant="98" id="Zkw-5M-f9o"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7a7-iP-NmP">
+                                                    <rect key="frame" x="106" y="0.0" width="182" height="46"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbA-xG-sdq">
+                                                            <rect key="frame" x="0.0" y="0.0" width="33.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bf3-J5-DIW">
+                                                            <rect key="frame" x="0.0" y="25.5" width="65.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="WAP-He-Qts" firstAttribute="leading" secondItem="a5o-Bw-0dw" secondAttribute="leading" constant="16" id="8Ec-qS-jgR"/>
+                                        <constraint firstItem="WAP-He-Qts" firstAttribute="top" secondItem="a5o-Bw-0dw" secondAttribute="top" constant="11" id="Zc4-ly-S5z"/>
+                                        <constraint firstAttribute="trailing" secondItem="WAP-He-Qts" secondAttribute="trailing" constant="16" id="jEC-QA-oCV"/>
+                                        <constraint firstAttribute="bottom" secondItem="WAP-He-Qts" secondAttribute="bottom" constant="10.5" id="yNn-HG-XJk"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="durationLabel" destination="Bf3-J5-DIW" id="9Be-ka-lah"/>
+                                    <outlet property="randomPhotoImageView" destination="dgU-Hv-Pjm" id="biu-6R-jxC"/>
+                                    <outlet property="titleLabel" destination="GbA-xG-sdq" id="3hH-2N-m9f"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BuL-E3-Ehu" id="po4-fd-vxR"/>
+                            <outlet property="delegate" destination="BuL-E3-Ehu" id="bwg-f7-BPT"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="History" image="History" selectedImage="History" id="LRl-rE-EVL"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oke-Rr-LTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-458.39999999999998" y="472.71364317841085"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="History" width="25" height="25"/>
+        <image name="Record" width="25" height="25"/>
+    </resources>
+</document>
